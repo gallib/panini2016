@@ -1,0 +1,22 @@
+.sticker {
+    margin-right: 0.5rem;
+}
+.sticker-single {
+    padding: 1rem 1rem;
+    background-color: #ececec;
+    cursor: pointer;
+}
+
+.sticker-glued {
+    text-align: center;
+    background-color: #19b5fe;
+    color: #fff;
+}
+
+.sticker-duplicate {
+    text-align: center;
+
+    a {
+        font-weight: bold;
+    }
+}

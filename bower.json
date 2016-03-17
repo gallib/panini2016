@@ -1,0 +1,26 @@
+{
+  "name": "panini-euro2016",
+  "version": "1.0.0",
+  "authors": [
+    "Alain Pellaux <alain@gallib.net>"
+  ],
+  "description": "Small tool to manage your Panini card for euro 2016.",
+  "main": "index.html",
+  "license": "GPLv3",
+  "homepage": "http://panini-euro2016.gallib.net",
+  "dependencies": {
+    "foundation-sites": "~6.2.0",
+    "motion-ui": "~1.2.2",
+    "angular": "~1.5.x",
+    "angular-route": "~1.5.x",
+    "angular-resource": "~1.5.x"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "private": true
+}

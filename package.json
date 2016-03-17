@@ -1,0 +1,33 @@
+{
+  "name": "panini-euro2016",
+  "version": "1.0.0",
+  "description": "Small tool to manage your Panini card for euro 2016.",
+  "main": "gulpfile.js",
+  "devDependencies": {
+    "browser-sync": "^2.11.1",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-load-plugins": "^1.1.0",
+    "gulp-sass": "^2.1.0",
+    "gulp-sequence": "^0.4.5"
+  },
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp sass"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gallib/panini2016.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gallib/panini2016/issues",
+    "email": "alain@gallib.net"
+  },
+  "author": "Alain Pellaux <alain@gallib.net>",
+  "license": "GPLv3",
+  "private": true,
+  "dependencies": {
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-concat": "^2.6.0"
+  }
+}

@@ -1,0 +1,40 @@
+<!doctype html>
+<html class="no-js" lang="en" ng-app="paniniApp">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Panini - UEFA Euro 2016</title>
+        <base href="/" />
+        <link rel="stylesheet" href="./assets/css/app.css">
+    </head>
+    <body>
+        <div class="row">
+            <div class="small-12 columns">
+                <h1>Collection Panini -  UEFA Euro 2016</h1>
+                <div class="row">
+                    <div class="small-12 medium-4 columns">
+                        <div class="sticker-single">La carte n'est pas dans la collection</div>
+                    </div>
+                    <div class="small-12 medium-4 columns end">
+                        <div class="sticker-single sticker-glued">La carte est collée</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="small-12 columns">
+                        <p>Le nombre de double est indiquée sous une carte collée</p>
+                    </div>
+                </div>
+                <div ng-view></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="small-12 columns">
+                <p>Ceci est juste une démo ayant pour but de prendre en main AngularJS et de tester par la même occasion MongoDB et ExpressJS</p>
+            </div>
+        </div>
+
+        <script src="./assets/js/foundation.js"></script>
+        <script src="./assets/js/app.js"></script>
+    </body>
+</html>
