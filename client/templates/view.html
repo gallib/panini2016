@@ -1,0 +1,11 @@
+<div ng-repeat="category in data" class="row">
+    <h2>{{category.name}}</h2>
+    <div class="small-12 columns clearflix">
+        <div ng-repeat="sticker in category.stickers" class="sticker float-left">
+            <div class="sticker-single sticker-view-only" ng-class="{'sticker-glued': owner.collections[(sticker.number -1)].glued}">{{sticker.number}}</div>
+            <div class="sticker-duplicate" ng-if="owner.collections[(sticker.number -1)].glued">
+                <span>{{owner.collections[(sticker.number -1)].duplicate}}</span>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="small-12 columns">
+        <div class="callout primary">
+            <p>Attention l'adresse <a href="{{url}}">{{url}}</a> doit rester privée. Ne la perd pas, il n'y a pas de moyen de la récupérer.</p>
+            <p>L'adresse à partager est <a href="{{publicUrl}}">{{publicUrl}}</a></p>
+        </div>
+    </div>
+</div>
+
+<div ng-repeat="category in data" class="row">
+    <h2>{{category.name}}</h2>
+    <div class="small-12 columns clearflix">
+        <div ng-repeat="sticker in category.stickers" class="sticker float-left">
+            <div class="sticker-single" ng-class="{'sticker-glued': owner.collections[(sticker.number -1)].glued}" ng-click="toggleGlued(owner.collections[(sticker.number -1)]);">{{sticker.number}}</div>
+            <div class="sticker-duplicate">
+                <a ng-if="owner.collections[(sticker.number -1)].glued" ng-click="updateDuplicate(owner.collections[(sticker.number -1)], -1);" href="javascript:void(0);">-</a>
+                <span>{{owner.collections[(sticker.number -1)].duplicate}}</span>
+                <a ng-if="owner.collections[(sticker.number -1)].glued" ng-click="updateDuplicate(owner.collections[(sticker.number -1)], 1);" href="javascript:void(0);">+</a>
+            </div>
+        </div>
+
+    </div>
+</div>
