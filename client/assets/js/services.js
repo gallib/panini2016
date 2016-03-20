@@ -3,7 +3,28 @@
 
     var paniniServices = angular.module('paniniServices', ['ngResource']);
 
-    paniniServices.factory('StickerService', ['$resource', '$http', function($resource, $http){
+    paniniServices.factory('OwnerService', ['$resource', function($resource){
+        return $resource('http://localhost:3005/owner', {}, {
+            query: {
+                method: 'GET'
+            },
+            create: {
+                method: 'POST'
+            }
+        });
+    }]);
+
+    paniniServices.factory('CollectionService', ['$resource', function($resource){
+        return $resource('http://localhost:3005/collection/:collectionId', {
+            collectionId: '@collectionId'
+        }, {
+            update: {
+                method: 'PUT'
+            }
+        });
+    }]);
+
+    paniniServices.factory('StickerService', ['$resource', function($resource){
         return $resource('http://localhost:3005/team/:teamId/sticker/:stickerId', {
             teamId: '@teamId',
             stickerId: '@stickerId'
@@ -14,8 +35,8 @@
         });
     }]);
 
-    paniniServices.factory('TeamListService', ['$resource', function($resource){
-        return $resource('http://localhost:3005/team', {}, {
+    paniniServices.factory('CategoryService', ['$resource', function($resource){
+        return $resource('http://localhost:3005/category', {}, {
             query: {
                 method: 'GET'
             }

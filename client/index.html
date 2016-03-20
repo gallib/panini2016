@@ -1,36 +1,41 @@
 <!doctype html>
 <html class="no-js" lang="en" ng-app="paniniApp">
     <head>
+        <base href="/">
         <meta charset="utf-8" />
         <meta http-equiv="x-ua-compatible" content="ie=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Panini - UEFA Euro 2016</title>
-        <base href="/" />
         <link rel="stylesheet" href="./assets/css/app.css">
     </head>
     <body>
         <div class="row">
-            <div class="small-12 columns">
-                <h1>Collection Panini -  UEFA Euro 2016</h1>
-                <div class="row">
-                    <div class="small-12 medium-4 columns">
-                        <div class="sticker-single">La carte n'est pas dans la collection</div>
-                    </div>
-                    <div class="small-12 medium-4 columns end">
-                        <div class="sticker-single sticker-glued">La carte est collée</div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="small-12 columns">
-                        <p>Le nombre de double est indiquée sous une carte collée</p>
-                    </div>
-                </div>
+            <div class="small-12 medium-8 columns">
+                <h1>Panini -  UEFA Euro 2016</h1>
                 <div ng-view></div>
+            </div>
+            <div class="small-12 medium-4 columns" ng-controller="SidebarController">
+                <div class="row">
+                    <div class="small-12 medium-6 columns sticker-single sticker-view-only text-centered">Carte a collé</div>
+                    <div class="small-12 medium-6 columns sticker-single sticker-view-only sticker-glued">Carte collée</div>
+                </div>
+
+                <p>Le nombre de double est indiquée sous une carte collée</p>
+                <h3>Créer ton album</h3>
+                <form name="createowner" novalidate>
+                    <div class="input-group">
+                        <label for="middle-label" class="input-group-label">Ton nom</label>
+                        <input class="input-group-field" type="text" placeholder="Ton nom ici" ng-model="owner.name" required />
+                        <div class="input-group-button">
+                            <input type="submit" class="button" value="Créer" ng-click="createOwner(owner)" />
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
         <div class="row">
             <div class="small-12 columns">
-                <p>Ceci est juste une démo ayant pour but de prendre en main AngularJS et de tester par la même occasion MongoDB et ExpressJS</p>
+                <p>Ce site est une démo ayant pour but de prendre en main AngularJS et de tester par la même occasion MongoDB et ExpressJS</p>
             </div>
         </div>
 

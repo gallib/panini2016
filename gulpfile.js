@@ -4,6 +4,7 @@ var rimraf      = require('rimraf');
 var browserSync = require('browser-sync').create();
 var sequence    = require('gulp-sequence');
 var concat      = require('gulp-concat');
+var modRewrite  = require('connect-modrewrite');
 
 var paths = {
     assets: [
@@ -77,7 +78,10 @@ gulp.task('concat:app', function() {
 // Starts the server
 gulp.task('server', ['build'], function() {
     browserSync.init({
-        server: "./build"
+        server: "./build",
+        middleware: [
+              modRewrite(['^([^.]+)$ /index.html [L]'])
+          ]
     });
 });
 

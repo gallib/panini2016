@@ -11,8 +11,16 @@
         function($routeProvider, $locationProvider) {
             $routeProvider
                 .when('/', {
-                    templateUrl: 'templates/index.html',
+                    templateUrl: './templates/index.html',
                     controller: 'PaniniController'
+                })
+                .when('/m/:privateId', {
+                    templateUrl: './templates/manage.html',
+                    controller: 'ManageController'
+                })
+                .when('/w/:publicId', {
+                    templateUrl: './templates/view.html',
+                    controller: 'ViewController'
                 })
                 .otherwise({
                     redirectTo: '/'

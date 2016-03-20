@@ -1,14 +1,5 @@
-<div ng-repeat="team in data" class="row">
-    <h2>{{team.name}}</h2>
-    <div class="small-12 columns clearflix">
-        <div ng-repeat="sticker in team.stickers" class="sticker float-left">
-            <div class="sticker-single" ng-class="{'sticker-glued': sticker.glued}" ng-click="toggleGlued(team._id, sticker);">{{sticker.number}}</div>
-            <div class="sticker-duplicate" ng-if="sticker.glued">
-                <a ng-click="updateDuplicate(team._id, sticker, -1);" href="javascript:void(0);">-</a>
-                <span>{{sticker.duplicate}}</span>
-                <a ng-click="updateDuplicate(team._id, sticker, 1);" href="javascript:void(0);">+</a>
-            </div>
-        </div>
-
+<divclass="row">
+    <div class="small-12 columns">
+        <p>Pour commencer, crée ton album en donnant ton nom sur le formulaire.</p>
     </div>
 </div>

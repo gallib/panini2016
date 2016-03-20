@@ -1,16 +1,20 @@
 .sticker {
-    margin-right: 0.5rem;
+    margin: 0 0.5rem 0 0;
 }
 .sticker-single {
     padding: 1rem 1rem;
     background-color: #ececec;
     cursor: pointer;
+    text-align: center;
 }
 
 .sticker-glued {
-    text-align: center;
     background-color: #19b5fe;
     color: #fff;
+}
+
+.sticker-view-only {
+    cursor: default;
 }
 
 .sticker-duplicate {
