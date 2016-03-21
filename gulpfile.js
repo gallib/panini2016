@@ -6,6 +6,8 @@ var sequence    = require('gulp-sequence');
 var concat      = require('gulp-concat');
 var modRewrite  = require('connect-modrewrite');
 
+require('es6-promise').polyfill();
+
 var paths = {
     assets: [
         './client/**/*.*',
