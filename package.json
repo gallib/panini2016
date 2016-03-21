@@ -29,6 +29,7 @@
   "private": true,
   "dependencies": {
     "gulp-autoprefixer": "^3.1.0",
-    "gulp-concat": "^2.6.0"
+    "gulp-concat": "^2.6.0",
+    "es6-promise": "~3.1.2"
   }
 }
