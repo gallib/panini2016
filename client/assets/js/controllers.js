@@ -55,33 +55,9 @@
         }
     ]);
 
-    paniniControllers.controller('PaniniController', ['$scope', 'CategoryService', 'StickerService',
-        function($scope, CategoryService, StickerService) {
-            $scope.owner = {};
+    paniniControllers.controller('PaniniController', ['$scope',
+        function($scope) {
 
-            CategoryService.get({}, function(data){
-                $scope.data = data.categories;
-            });
-
-            $scope.toggleGlued = function(teamId, sticker) {
-                sticker.glued = !sticker.glued;
-
-                StickerService.update({
-                    teamId: teamId,
-                    stickerId: sticker._id
-                }, sticker);
-            };
-
-            $scope.updateDuplicate = function(teamId, sticker, increment) {
-                if (sticker.duplicate + increment >= 0) {
-                    sticker.duplicate += increment;
-
-                    StickerService.update({
-                        teamId: teamId,
-                        stickerId: sticker._id
-                    }, sticker);
-                }
-            };
         }
     ]);
 
